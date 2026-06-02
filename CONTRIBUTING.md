@@ -19,7 +19,7 @@
 
 - 原文の英語は `source/en/chapters/` に置きます。
 - 日本語訳は `source/ja/chapters/` に置きます。
-- 英語版と日本語版のファイル名は対応させます。
+- 英語版と日本語版の章番号は対応させます。
 - `01-`、`02-`、`03-` のような番号付きプレフィックスで章順を保ちます。
 - 生成物である `dist/` は編集しません。
 
@@ -95,7 +95,7 @@ Issue や PR には、できれば次を含めてください。
 - 見出しレベルが一貫している
 - 用語が一貫している
 - Markdown がきれいにレンダリングされる
-- 英語版と日本語版のファイル名が揃っている
+- 英語版と日本語版の章番号が揃っている
 - 生成済みの本文と PDF がビルドできる
 
 ## Code of Conduct
@@ -125,7 +125,7 @@ In other words, localization here is treated as an ongoing process rather than a
 
 - Keep the original English text in `source/en/chapters/`.
 - Keep the Japanese translation in `source/ja/chapters/`.
-- Keep chapter filenames aligned between English and Japanese.
+- Keep chapter numbers aligned between English and Japanese.
 - Keep chapter order stable with numeric prefixes such as `01-`, `02-`, `03-`.
 - Do not edit generated files in `dist/`.
 
@@ -201,10 +201,9 @@ For disagreements or ambiguous passages:
 - Heading levels are consistent.
 - Glossary terms are used consistently.
 - Markdown renders cleanly.
-- English and Japanese chapter filenames stay in sync.
+- English and Japanese chapter numbers stay in sync.
 - The merged manuscript and PDF build successfully.
 
 ## Code Of Conduct
 
 Please read and follow the repository's [Code of Conduct](CODE_OF_CONDUCT.md).
-
