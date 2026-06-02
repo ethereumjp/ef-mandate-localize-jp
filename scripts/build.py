@@ -158,13 +158,11 @@ def export_pdf(markdown_path: Path, pdf_path: Path) -> None:
         "-V",
         "documentclass=ltjsarticle",
         "-V",
-        "mainfont=Hiragino Sans W3",
+        "mainfont=HaranoAjiMincho-Regular",
         "-V",
-        "mainfontoptions=BoldFont=Hiragino Sans W6",
+        "mainfontoptions=BoldFont=HaranoAjiMincho-Bold",
         "-V",
-        "CJKmainfont=Hiragino Sans W3",
-        "-V",
-        "luatexjapresetoptions=hiragino-pron",
+        "CJKmainfont=HaranoAjiMincho-Regular",
         "--toc",
     ]
     subprocess.run(command, check=True)

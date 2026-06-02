@@ -17,8 +17,20 @@ jobs:
         with:
           python-version: "3.14"
 
-      - name: Install pandoc and LuaTeX
-        run: sudo apt-get update && sudo apt-get install -y pandoc texlive-luatex
+      - name: Install pandoc and TeX dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y \
+            pandoc \
+            texlive-latex-base \
+            texlive-latex-recommended \
+            texlive-luatex \
+            texlive-lang-japanese
+
+      - name: Verify Japanese fonts
+        run: |
+          which pdflatex
+          kpsewhich HaranoAjiMincho-Regular.otf
 
       - name: Build manuscript
         run: python scripts/build.py
