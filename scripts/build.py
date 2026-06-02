@@ -74,19 +74,26 @@ def list_chapters(chapters_dir: Path) -> list[Path]:
     return chapter_paths
 
 
-def chapter_stems(paths: list[Path]) -> set[str]:
-    return {path.stem for path in paths}
+def chapter_number(path: Path) -> str:
+    number = path.stem[:2]
+    if len(number) != 2 or not number.isdigit():
+        raise ValueError(f"Chapter filename must begin with a two-digit chapter number: {path}")
+    return number
+
+
+def chapter_numbers(paths: list[Path]) -> set[str]:
+    return {chapter_number(path) for path in paths}
 
 
 def validate_alignment(source_paths: list[Path], translation_paths: list[Path]) -> None:
-    source_stems = chapter_stems(source_paths)
-    translation_stems = chapter_stems(translation_paths)
+    source_numbers = chapter_numbers(source_paths)
+    translation_numbers = chapter_numbers(translation_paths)
 
-    missing_in_translation = sorted(source_stems - translation_stems)
-    missing_in_source = sorted(translation_stems - source_stems)
+    missing_in_translation = sorted(source_numbers - translation_numbers)
+    missing_in_source = sorted(translation_numbers - source_numbers)
 
     if missing_in_translation or missing_in_source:
-        parts: list[str] = ["Chapter files are not aligned between source and translation."]
+        parts: list[str] = ["Chapter numbers are not aligned between source and translation."]
         if missing_in_translation:
             parts.append(f"Missing in source/ja: {', '.join(missing_in_translation)}")
         if missing_in_source:
@@ -147,7 +154,7 @@ def export_pdf(markdown_path: Path, pdf_path: Path) -> None:
         str(markdown_path),
         "-o",
         str(pdf_path),
-        "--pdf-engine=xelatex",
+        "--pdf-engine=lualatex",
         "--toc",
     ]
     subprocess.run(command, check=True)
