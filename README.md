@@ -1,2 +1,2 @@
 # ef-mandate-localize-jp
-Localizing / translating the EF mandate into Japanese
+Localizing / translating the [EF mandate](https://ethereum.foundation/ef-mandate.pdf) into Japanese
