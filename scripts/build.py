@@ -155,6 +155,16 @@ def export_pdf(markdown_path: Path, pdf_path: Path) -> None:
         "-o",
         str(pdf_path),
         "--pdf-engine=lualatex",
+        "-V",
+        "documentclass=ltjsarticle",
+        "-V",
+        "mainfont=Hiragino Sans W3",
+        "-V",
+        "mainfontoptions=BoldFont=Hiragino Sans W6",
+        "-V",
+        "CJKmainfont=Hiragino Sans W3",
+        "-V",
+        "luatexjapresetoptions=hiragino-pron",
         "--toc",
     ]
     subprocess.run(command, check=True)
