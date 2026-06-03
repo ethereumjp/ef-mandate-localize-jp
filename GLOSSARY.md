@@ -15,3 +15,4 @@ Add entries in this format:
 - `coordinate, coordination` -> `コーディネーション`
 - `money` -> `貨幣`
 - `free` -> `フリー`
+- `walkaway test` -> `立ち去りテスト`
