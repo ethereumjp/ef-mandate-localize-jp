@@ -14,3 +14,4 @@ Add entries in this format:
 - `open source` -> `オープンソース`
 - `coordinate, coordination` -> `コーディネーション`
 - `money` -> `貨幣`
+- `free` -> `フリー`
