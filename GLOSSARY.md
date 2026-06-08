@@ -17,3 +17,5 @@ Add entries in this format:
 - `money` -> `貨幣`
 - `free` -> `フリー`
 - `walkaway test` -> `立ち去りテスト`
+- `resilience` -> `レジリエンス`
+- `agents` -> `エージェント`
