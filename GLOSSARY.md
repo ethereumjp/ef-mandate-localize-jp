@@ -19,3 +19,7 @@ Add entries in this format:
 - `walkaway test` -> `立ち去りテスト`
 - `resilience` -> `レジリエンス`
 - `agents` -> `エージェント`
+- `steward, stewards` -> `守護者`
+- `fellow travelers` -> `共に歩む仲間`
+- `permissionless` -> `パーミッションレス`
+- `we, our` -> `私たち` - 我々 は使わない
